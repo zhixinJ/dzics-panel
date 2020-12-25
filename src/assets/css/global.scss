@@ -1,0 +1,377 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* font-size: 100%; */
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: #fff;
+}
+
+/* my css */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.h-50 {
+    height: 50% !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+
+.l-font-16 {
+    font-size: 16px;
+}
+
+.l-font-13 {
+    font-size: 13px;
+}
+
+.l-font-20 {
+    font-size: 20px;
+}
+
+.l-font-xs {
+    font-size: 22px;
+}
+
+.l-font-sm {
+    font-size: 26px;
+}
+
+.l-font-md {
+    font-size: 28px;
+}
+
+.l-font-lg {
+    font-size: 30px;
+}
+
+.l-font-xl {
+    font-size: 34px;
+}
+
+.l-flex {
+    display: flex;
+}
+
+.l-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.l-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.l-col-center {
+    align-items: center;
+}
+
+.l-col-top {
+    align-items: flex-start;
+}
+
+.l-col-bottom {
+    align-items: flex-end;
+}
+
+.l-row-center {
+    justify-content: center;
+}
+
+.l-row-left {
+    justify-content: flex-start;
+}
+
+.l-row-right {
+    justify-content: flex-end;
+}
+
+.l-row-between {
+    justify-content: space-between;
+}
+
+.l-row-around {
+    justify-content: space-around;
+}
+
+.l-text-left {
+    text-align: left;
+}
+
+.l-text-center {
+    text-align: center;
+}
+
+.l-text-right {
+    text-align: right;
+}
+
+.l-flex-col {
+    flex-direction: column;
+}
+
+.font-bold {
+    font-weight: 500;
+}
+
+.font-bolder {
+    font-weight: 600;
+}
+
+/*内容框的四个角*/
+.angle {
+    border:2px solid #95B8E7;
+    -webkit-box-shadow:#E0ECFF 0 0 10px;
+    -moz-box-shadow:#E0ECFF 0 0 10px;
+    box-shadow:inset 0 0 30px #E0ECFF;
+    position:relative;
+    height: 100%;
+    width:100%;
+
+    .angle-topL {
+        width:20px;
+        height:20px;
+        border-top:#204E8A 2px solid;
+        border-left:#204E8A 2px solid;
+        position:absolute;
+        top:-2px;
+        left:-2px;
+    }
+    .angle-topR {
+        width:20px;
+        height:20px;
+        border-top:#204E8A 2px solid;
+        border-right:#204E8A 2px solid;
+        position:absolute;
+        top:-2px;
+        right:-2px;
+    }
+    .angle-bottomL {
+        width:20px;
+        height:20px;
+        border-bottom:#204E8A 2px solid;
+        border-left:#204E8A 2px solid;
+        position:absolute;
+        bottom:-2px;
+        left:-2px;
+    }
+    .angle-bottomR {
+        width:20px;
+        height:20px;
+        border-bottom:#204E8A 2px solid;
+        border-right:#204E8A 2px solid;
+        position:absolute;
+        bottom:-2px;
+        right:-2px;
+    }
+}
+
+/*标题背景缺角矩形*/
+.rect-taps-title{
+    background-color: #E0EDFE;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        40px 15px,/*角1*/
+        calc(100% - 25px) 15px,/*角2*/
+        calc(100% - 16px) 25px,/*角2*/
+        calc(100% - 16px) 50px,/*角3*/
+        calc(100% - 16px) 50px,/*角3*/
+        25px 50px,/*角4*/
+        25px 50px,/*角4*/
+        25px 30px/*角1*/);
+}
+
+    /*蓝色缺角矩形*/
+.rect-taps-blue{
+    background-color: #96B8E6;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        35px 0,/*角1*/
+        calc(100% - 20px) 0,/*角2*/
+        100% 20px,/*角2*/
+        100% 100%,/*角3*/
+        100% 100%,/*角3*/
+        20px 100%,/*角4*/
+        0 calc(100% - 20px),/*角4*/
+        0 35px/*角1*/);
+}
+
+/*白色缺角矩形*/
+.rect-taps-white{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+        36px 2px,/*角1*/
+        calc(100% - 22px) 2px,/*角2*/
+        calc(100% - 2px) 22px,/*角2*/
+        calc(100% - 2px) calc(100% - 2px),/*角3*/
+        calc(100% - 2px) calc(100% - 2px),/*角3*/
+        22px calc(100% - 2px),/*角4*/
+        2px calc(100% - 22px),/*角4*/
+        2px 36px/*角1*/);
+}
