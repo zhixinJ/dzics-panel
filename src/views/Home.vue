@@ -18,12 +18,12 @@
 					<i class="angle-bottomR"></i>
 				</div>
 
-				<div class="panel-wrap">
+				<div class="panel-wrap l-flex l-flex-col l-row-between">
 				  <!-- 面板上面部分信息 -->
-          <el-row class="w-100 h-50">
+          <el-row class="w-100 h-30">
 
             <el-col class="h-100" :span="8">
-              <div style="width:584px;">
+              <div style="width:95%;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
                     <!-- 子模块标题部分 -->
@@ -34,7 +34,7 @@
                     </div>
                     <div class="l-flex">
                       <div class="w-50">
-                        <img src="../assets/logo.png" alt="" srcset="" width="90%" height="132px">
+                        <img src="../assets/logo.png" alt="" srcset="" width="90%" height="88px">
                         <!-- 子模块信息部分 -->
                         <div class="item-info l-text-left">
                           <div class="item-info-text l-font-16">产品ID：ID900000</div>
@@ -70,7 +70,7 @@
             </el-col>
 
             <el-col class="h-100" :span="16">
-              <div style="width:100%;height:352px;">
+              <div style="width:100%;height:100%;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
                     <!-- 图表标题部分 -->
@@ -80,7 +80,74 @@
                       </div>
                     </div>
                     <!-- 图表信息部分 -->
-                    <div id="echart2" style="width: 100%;height:320px;" ref="echart2"></div>
+                    <div id="echart2" style="width: 100%;height:90%;" ref="echart2"></div>
+                  </div>
+                </div>
+              </div>
+            </el-col>
+          </el-row>
+
+          <el-row class="w-100 h-30">
+
+            <el-col class="h-100" :span="8">
+              <div style="width:95%;">
+                <div class="rect-taps-blue">
+                  <div class="rect-taps-white">
+                    <!-- 子模块标题部分 -->
+                    <div class="item-title">
+                      <div class="rect-taps-title">
+                        <div class="font-bolder l-font-20 l-text-center item-title-pd">产品名称</div>
+                      </div>
+                    </div>
+                    <div class="l-flex">
+                      <div class="w-50">
+                        <img src="../assets/logo.png" alt="" srcset="" width="90%" height="88px">
+                        <!-- 子模块信息部分 -->
+                        <div class="item-info l-text-left">
+                          <div class="item-info-text l-font-16">产品ID：ID900000</div>
+                          <div class="item-info-text l-font-16">规格型号：ZH89909</div>
+                          <div class="item-info-text l-font-16">计划总产：1000</div>
+                          <div class="item-info-text l-font-16">节拍时间：2</div>
+                        </div>
+                      </div>
+                      <div class="w-50">
+                        <div class="item-info l-text-left">
+                          <el-row class="w-100 l-row-center l-col-center">
+                            <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
+                              <div class="l-flex l-row-around l-col-center l-font-13 item-circle">200件</div>
+                              <div class="font-bolder l-font-16 l-text-center circle-title-pd">实际日产</div>
+                            </el-col>
+
+                            <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
+                              <el-progress type="circle" :percentage="80" :width="progressWidth"></el-progress>
+                              <div class="font-bolder l-font-16 l-text-center circle-title-pd">日完成率</div>
+                            </el-col>
+                          </el-row>
+                          <div class="item-info-text l-font-16">计划日产：500</div>
+                          <div class="item-info-text l-font-16">计划完工：3</div>
+                          <div class="item-info-text l-font-16">实际日产：200</div>
+                          <div class="item-info-text l-font-16">实际节拍：3</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </el-col>
+
+            <el-col class="h-100" :span="16">
+              <div style="width:100%;height:100%;">
+                <div class="rect-taps-blue">
+                  <div class="rect-taps-white">
+                    <!-- 图表标题部分 -->
+                    <div class="item-title">
+                      <div class="rect-taps-title">
+                        <div class="font-bolder l-font-20 l-text-center item-title-pd">日产柱状图</div>
+                      </div>
+                    </div>
+                    <!-- 图表信息部分 -->
+                    <div id="echart2" style="width: 100%;height:90%;" ref="echart2"></div>
                   </div>
                 </div>
               </div>
@@ -88,12 +155,12 @@
           </el-row>
 
 				  <!-- 面板下面部分信息 -->
-          <el-row class="w-100 h-50">
+          <!-- <el-row class="w-100 h-30">
             <el-col class="h-100" :span="8">
               <div style="width:584px;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
-                    <!-- 子模块标题部分 -->
+                    子模块标题部分
                     <div class="item-title">
                       <div class="rect-taps-title">
                         <div class="font-bolder l-font-20 l-text-center item-title-pd">机器人信息</div>
@@ -102,7 +169,7 @@
                     <div class="l-flex">
                       <div class="w-50">
                         <img src="../assets/logo.png" alt="" srcset="" width="90%" height="130px">
-                        <!-- 子模块信息部分 -->
+                        子模块信息部分
                         <div class="item-info l-text-left">
                           <div class="item-info-text l-font-16">实时位置：X:0 Y:0 Z:0</div>
                           <div class="item-info-text l-font-16">操作模式：自动</div>
@@ -123,8 +190,8 @@
                           <div class="item-info-text l-font-16">停机次数：0次</div>
                           <div class="item-info-text l-font-16">生产数量：700个</div>
                           <div class="item-info-text l-font-16">停机状态：0
-                            <!-- <div>停机状态：</div>
-                            <icon name="green" scale="2"></icon> -->
+                            <div>停机状态：</div>
+                            <icon name="green" scale="2"></icon>
                           </div>
                           <div class="item-info-text l-font-16">告警状态：80%</div>
                         </div>
@@ -140,13 +207,13 @@
               <div style="width:100%;height:378px;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
-                    <!-- 图表标题部分 -->
+                    图表标题部分
                     <div class="item-title">
                       <div class="rect-taps-title">
                         <div class="font-bolder l-font-16 l-text-center item-title-pd">月产柱状图</div>
                       </div>
                     </div>
-                    <!-- 图表信息部分 -->
+                    图表信息部分
                     <div id="echart1" style="width: 100%;height:340px;" ref="echart1"></div>
                   </div>
                 </div>
@@ -154,7 +221,7 @@
 
               
             </el-col>
-          </el-row>
+          </el-row> -->
 					
 				</div>
 			</div>
@@ -174,12 +241,12 @@ export default {
   name: "Home",
   data(){
     return {
-      progressWidth: 90,
+      progressWidth: 66,
     }
   },
   components: {},
   mounted() {
-    this.handleChartDay()
+    // this.handleChartDay()
     this.handleChartMounth()
   },
   methods:{
@@ -367,7 +434,7 @@ export default {
       }
 
       .circle-title-pd{
-        padding: 6px 0 24px;
+        padding: 6px 0 4px;
       }
 
       /**子模块信息模块样式 */
@@ -381,8 +448,8 @@ export default {
         }
 
         .item-circle{
-          width:78px;
-          height:78px;
+          width:54px;
+          height:54px;
           border:6px solid #20A0FF;
           border-radius:50%;
         }
