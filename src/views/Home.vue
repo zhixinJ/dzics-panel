@@ -4,7 +4,7 @@
 		<!-- 头部信息 -->
 		<div class="header-wrap l-flex l-row-center">
 			<img src="../assets/logo.png" alt="" class="logo-img" >
-			<h3 class="l-font-10 font-bolder">菲仕智能数字看板</h3>
+			<h3 class="l-font-20 font-bolder">菲仕智能数字看板</h3>
 		</div>
 
 		<!-- 内容 -->
@@ -22,7 +22,7 @@
 				  <!-- 面板上面部分信息 -->
           <el-row class="w-100 h-30">
 
-            <el-col class="h-100" :span="10">
+            <el-col class="h-100" :span="8">
               <div style="width:95%;" class="h-100">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
@@ -52,7 +52,7 @@
                             </el-col>
 
                             <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
-                              <el-progress type="circle" :percentage="80" :width="progressWidth" stroke-width="3"></el-progress>
+                              <el-progress type="circle" :percentage="80" :width="progressWidth" :stroke-width="3"></el-progress>
                               <div class="font-bolder l-text-center circle-title-pd">日完成率</div>
                             </el-col>
                           </el-row>
@@ -69,7 +69,7 @@
               </div>
             </el-col>
 
-            <el-col class="h-100" :span="14">
+            <el-col class="h-100" :span="16">
               <div style="width:100%;height:100%;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
@@ -89,7 +89,7 @@
 
           <el-row class="w-100 h-30">
 
-            <el-col class="h-100" :span="10">
+            <el-col class="h-100" :span="8">
               <div style="width:95%;" class="h-100">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
@@ -136,7 +136,7 @@
               </div>
             </el-col>
 
-            <el-col class="h-100" :span="14">
+            <el-col class="h-100" :span="16">
               <div style="width:100%;height:100%;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
@@ -181,10 +181,13 @@ export default {
     this.handleChartMounth()
   },
   methods:{
-    handleChartDay(){
+    handleChartMounth(){
       var myChart = this.$echarts.init(document.getElementById('echart1'))
       var option = {
         color:["#FF6600","#0099FF"],
+        textStyle: {
+          fontSize: 6
+        },
         tooltip: {
             trigger: 'axis'
         },
@@ -205,12 +208,17 @@ export default {
         xAxis: [
             {
                 type: 'category',
-                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                // fontSize: 6,
+                // lineHeight: 70,
             }
         ],
         yAxis: [
             {
-                type: 'value'
+                data: [100, 200, 300, 400, 500],
+                type: 'value',
+                // fontSize: 20,
+                // lineHeight: 70,
             }
         ],
         series: [
@@ -220,13 +228,14 @@ export default {
                 data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 32.2, 32.6, 20.0, 6.4, 3.3],
                 markPoint: {
                     data: [
-                        {type: 'max', name: '最大值'},
-                        {type: 'min', name: '最小值'}
+                        {type: 'max', name: '最大值', symbolSize: 28},
+                        {type: 'min', name: '最小值', symbolSize: 28},
                     ]
                 },
                 markLine: {
                     data: [
-                        {type: 'average', name: '平均值'}
+                        {type: 'average', name: '平均值'},
+                        // {symbolSize: 5}
                     ]
                 }
             },
@@ -242,7 +251,7 @@ export default {
                 },
                 markLine: {
                     data: [
-                        {type: 'average', name: '平均值'}
+                        {type: 'average', name: '平均值', fontSize: 16}
                     ]
                 }
             }
@@ -250,7 +259,7 @@ export default {
       }
       myChart.setOption(option)
     },
-    handleChartMounth(){
+    handleChartDay(){
       var myChart = this.$echarts.init(document.getElementById('echart2'))
       var option = {
         color:["#FF6600","#0099FF"],
