@@ -22,8 +22,8 @@
 				  <!-- 面板上面部分信息 -->
           <el-row class="w-100 h-50">
 
-            <el-col class="h-100" :span="4">
-              <div style="width:280px;">
+            <el-col class="h-100" :span="8">
+              <div style="width:584px;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
                     <!-- 子模块标题部分 -->
@@ -32,37 +32,38 @@
                         <div class="font-bolder l-font-20 l-text-center item-title-pd">产品名称</div>
                       </div>
                     </div>
-                    <img src="../assets/logo.png" alt="" srcset="" width="90%" height="140px">
-                    <!-- 子模块信息部分 -->
-                    <div class="item-info l-text-left">
-                      <div class="item-info-text l-font-16">产品ID：ID900000</div>
-                      <div class="item-info-text l-font-16">规格型号：ZH89909</div>
-                      <div class="item-info-text l-font-16">计划总产：1000</div>
-                      <div class="item-info-text l-font-16">节拍时间：2</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </el-col>
+                    <div class="l-flex">
+                      <div class="w-50">
+                        <img src="../assets/logo.png" alt="" srcset="" width="90%" height="132px">
+                        <!-- 子模块信息部分 -->
+                        <div class="item-info l-text-left">
+                          <div class="item-info-text l-font-16">产品ID：ID900000</div>
+                          <div class="item-info-text l-font-16">规格型号：ZH89909</div>
+                          <div class="item-info-text l-font-16">计划总产：1000</div>
+                          <div class="item-info-text l-font-16">节拍时间：2</div>
+                        </div>
+                      </div>
+                      <div class="w-50">
+                        <div class="item-info l-text-left">
+                          <el-row class="w-100 l-row-center l-col-center">
+                            <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
+                              <div class="l-flex l-row-around l-col-center l-font-13 item-circle">200件</div>
+                              <div class="font-bolder l-font-16 l-text-center circle-title-pd">实际日产</div>
+                            </el-col>
 
-            <el-col class="h-100" :span="4">
-              <div style="width:280px;">
-                <div class="rect-taps-blue">
-                  <div class="rect-taps-white">
-                    <!-- 子模块标题部分 -->
-                    <div class="item-title">
-                      <div class="rect-taps-title">
-                        <div class="font-bolder l-font-20 l-text-center item-title-pd">机器人信息</div>
+                            <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
+                              <el-progress type="circle" :percentage="80" :width="progressWidth"></el-progress>
+                              <div class="font-bolder l-font-16 l-text-center circle-title-pd">日完成率</div>
+                            </el-col>
+                          </el-row>
+                          <div class="item-info-text l-font-16">计划日产：500</div>
+                          <div class="item-info-text l-font-16">计划完工：3</div>
+                          <div class="item-info-text l-font-16">实际日产：200</div>
+                          <div class="item-info-text l-font-16">实际节拍：3</div>
+                        </div>
                       </div>
                     </div>
-                    <img src="../assets/logo.png" alt="" srcset="" width="90%" height="140px">
-                    <!-- 子模块信息部分 -->
-                    <div class="item-info l-text-left">
-                      <div class="item-info-text l-font-16">产品ID：ID900000</div>
-                      <div class="item-info-text l-font-16">规格型号：ZH89909</div>
-                      <div class="item-info-text l-font-16">计划总产：1000</div>
-                      <div class="item-info-text l-font-16">节拍时间：2</div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -88,78 +89,54 @@
 
 				  <!-- 面板下面部分信息 -->
           <el-row class="w-100 h-50">
-            <el-col class="h-100 l-flex l-flex-col l-row-around" :span="4">
-              <div style="width:280px;">
+            <el-col class="h-100" :span="8">
+              <div style="width:584px;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">
                     <!-- 子模块标题部分 -->
                     <div class="item-title">
                       <div class="rect-taps-title">
-                        <div class="font-bolder l-font-20 l-text-center item-title-pd">日生产情况</div>
+                        <div class="font-bolder l-font-20 l-text-center item-title-pd">机器人信息</div>
                       </div>
                     </div>
-                    <!-- 子模块信息部分 -->
-                    <div class="item-info l-text-left">
-                      <el-row class="w-100 l-row-center l-col-center">
-                        <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
-                          <div class="l-flex l-row-around l-col-center l-font-13 item-circle">200件</div>
-                          <div class="font-bolder l-font-16 l-text-center circle-title-pd">实际日产</div>
-                        </el-col>
-
-                        <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
-                          <el-progress type="circle" :percentage="80" :width="progressWidth"></el-progress>
-                          <div class="font-bolder l-font-16 l-text-center circle-title-pd">日完成率</div>
-                        </el-col>
-                      </el-row>
-                      <div class="item-info-text l-font-16">计划日产：500</div>
-                      <div class="item-info-text l-font-16">计划完工：3</div>
-                      <div class="item-info-text l-font-16">实际日产：200</div>
-                      <div class="item-info-text l-font-16">实际节拍：3</div>
-                      <div class="item-info-text l-font-16">日完成率：80%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-
-            <el-col class="h-100 l-flex l-flex-col l-row-around" :span="4">
-              <div style="width:280px;">
-                <div class="rect-taps-blue">
-                  <div class="rect-taps-white">
-                    <!-- 子模块标题部分 -->
-                    <div class="item-title">
-                      <div class="rect-taps-title">
-                        <div class="font-bolder l-font-20 l-text-center item-title-pd">总生产情况</div>
+                    <div class="l-flex">
+                      <div class="w-50">
+                        <img src="../assets/logo.png" alt="" srcset="" width="90%" height="130px">
+                        <!-- 子模块信息部分 -->
+                        <div class="item-info l-text-left">
+                          <div class="item-info-text l-font-16">实时位置：X:0 Y:0 Z:0</div>
+                          <div class="item-info-text l-font-16">操作模式：自动</div>
+                          <div class="item-info-text l-font-16">链接状态：<font class="text-warn">脱机</font></div>
+                          <div class="item-info-text l-font-16">运行状态：<font class="text-warn">停机</font></div>
+                          <div class="item-info-text l-font-16">速度倍率：20%</div>
+                        </div>
+                      </div>
+                      <div class="w-50">
+                        <div class="item-info l-text-left">
+                          <el-row class="w-100 l-row-center l-col-center">
+                            <el-col :span="24" class="l-flex l-flex-col l-row-around l-col-center">
+                              <div class="l-flex l-row-around l-col-center l-font-13 item-circle">200件</div>
+                              <div class="font-bolder l-font-16 l-text-center circle-title-pd">总产</div>
+                            </el-col>
+                          </el-row>
+                          <div class="item-info-text l-font-16">加工节拍：0s</div>
+                          <div class="item-info-text l-font-16">停机次数：0次</div>
+                          <div class="item-info-text l-font-16">生产数量：700个</div>
+                          <div class="item-info-text l-font-16">停机状态：0
+                            <!-- <div>停机状态：</div>
+                            <icon name="green" scale="2"></icon> -->
+                          </div>
+                          <div class="item-info-text l-font-16">告警状态：80%</div>
+                        </div>
                       </div>
                     </div>
-                    <!-- 子模块信息部分 -->
-                    <div class="item-info l-text-left">
-                      <!-- <div class="l-flex l-row-center l-col-center" style="height:300px;font-size:140px;">50</div> -->
-                      <el-row class="w-100 l-row-center l-col-center">
-                        <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
-                          <div class="l-flex l-row-around l-col-center l-font-13 item-circle">200件</div>
-                          <div class="font-bolder l-font-16 l-text-center circle-title-pd">实际总产</div>
-                        </el-col>
-
-                        <el-col :span="12" class="l-flex l-flex-col l-row-around l-col-center">
-                          <el-progress type="circle" :percentage="80" :width="progressWidth"></el-progress>
-                          <div class="font-bolder l-font-16 l-text-center circle-title-pd">总完成率</div>
-                        </el-col>
-                      </el-row>
-                      <div class="item-info-text l-font-16">计划日产：500</div>
-                      <div class="item-info-text l-font-16">计划完工：3</div>
-                      <div class="item-info-text l-font-16">实际日产：200</div>
-                      <div class="item-info-text l-font-16">实际节拍：3</div>
-                      <div class="item-info-text l-font-16">日完成率：80%</div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
             </el-col>
 
             <el-col class="h-100 l-flex l-flex-col l-row-around" :span="16">
-              
-
               <div style="width:100%;height:378px;">
                 <div class="rect-taps-blue">
                   <div class="rect-taps-white">

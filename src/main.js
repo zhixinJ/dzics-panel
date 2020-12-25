@@ -7,6 +7,9 @@ import './assets/css/global.scss' // 全局样式
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import Icon from 'vue-svg-icon/Icon.vue';
+Vue.component('icon', Icon);
+
 // 引入echarts
 import echarts from 'echarts/lib/echarts'
 require('echarts/lib/chart/bar');
